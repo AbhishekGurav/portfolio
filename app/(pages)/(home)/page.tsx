@@ -1,8 +1,13 @@
-export default function Home() {
+import { TypographyH1 } from "@/components/ui/typographyH1";
+
+type Props = {};
+
+const Home = (props: Props) => {
   return (
-    <div className="h-full p-6 font-inter text-4xl">
-      <p className="font-inter">Abhishek Gurav</p>
-      <p className="font-mono">Abhishek Gurav</p>
+    <div className="bg-yellow-200 subpixel-antialiased">
+      <TypographyH1>Home</TypographyH1>
     </div>
   );
-}
+};
+
+export default Home;

@@ -3,6 +3,7 @@ import { Inter, Inter_Tight, Share_Tech_Mono} from "next/font/google";
 export const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["200", "300", "600"]
 });
 
 export const interTight = Inter_Tight({

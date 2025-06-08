@@ -2,12 +2,12 @@ import { TypographyH1 } from "@/components/ui/typographyH1";
 
 type Props = {};
 
-const Experience = (props: Props) => {
+const Projects = (props: Props) => {
   return (
     <div>
-      <TypographyH1>Experience</TypographyH1>
+      <TypographyH1>Projects</TypographyH1>
     </div>
   );
 };
 
-export default Experience;
+export default Projects;
