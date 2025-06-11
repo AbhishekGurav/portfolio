@@ -32,7 +32,7 @@ export function NavSection() {
                 }`}
               >
                 
-                <span className={isActive ? "opacity-0" : "opacity-100"}>
+                <span className={`${isActive ? "opacity-0" : "opacity-100"} text-foreground`}>
                   {item.name}
                 </span>
 
