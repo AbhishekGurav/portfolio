@@ -5,7 +5,7 @@ type TypographyListProps = {
 
 export function TypographyList({ items, children }: TypographyListProps) {
   return (
-    <ul className="my-6 ml-6 list-none [&>li]:mt-2">
+    <ul className="my-3 ml-3 list-none [&>li]:mt-4">
       {items
         ? items.map((item, i) => <li key={i}>{item}</li>)
         : children}
