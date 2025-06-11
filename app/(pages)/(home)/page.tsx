@@ -4,7 +4,7 @@ type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <div className="subpixel-antialiased">
+    <div className="subpixel-antialiased flex flex-col justify-end">
       <TypographyH1>Home</TypographyH1>
     </div>
   );
