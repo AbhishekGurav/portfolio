@@ -9,9 +9,7 @@ export function TypographyH1({children}: Readonly<{children : ReactNode}>) {
   
   return (
     <h1 className={cn(
-      "scroll-m-20 text-center text-4xl font-medium tracking-tight text-balance",
-      isMonospaced ? "font-mono" : "font-inter"
-    )}>
+      "scroll-m-20 text-center text-4xl font-medium tracking-tight text-balance", isMonospaced ? "font-mono" : "font-inter")}>
       {children}
     </h1>
   )
