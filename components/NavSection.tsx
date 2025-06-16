@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { TypographyList } from "./ui/typographyList";
-import { motion } from "framer-motion";
+ import {motion} from "motion/react"
 
 const navItems = [
   { name: "Home", href: "/" },

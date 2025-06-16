@@ -1,18 +1,13 @@
-import { Inter, Inter_Tight, Share_Tech_Mono} from "next/font/google";
+import { Inter, Share_Tech_Mono} from "next/font/google";
 
 export const inter = Inter({
-  variable: "--font-inter",
+  variable: "--font-inter-variable",
   subsets: ["latin"],
-  weight: ["200", "300", "600"]
-});
-
-export const interTight = Inter_Tight({
-  variable: "--font-inter-tight",
-  subsets: ["latin"],
+  weight: ["200", "400", "700"]
 });
 
 export const sharetechmono = Share_Tech_Mono({
-  variable: "--font-mono",
+  variable: "--font-share-tech-mono",
   subsets: ["latin"],
   weight: ["400"]
 });

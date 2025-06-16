@@ -11,23 +11,23 @@ export const ThemeControls = () => {
       <div className="theme-button w-20 flex items-center gap-2">
         <Checkbox 
           checked={theme === 'light'} 
-          onCheckedChange={() => toggleTheme('light')}
+          onCheckedChange={() => toggleTheme( theme=== 'light' ? 'dark' : 'light')}
         />
-        LIGHT
+        <span>LIGHT</span>
       </div>
       <div className="theme-button w-20 flex items-center gap-2">
         <Checkbox 
           checked={theme === 'dark'} 
-          onCheckedChange={() => toggleTheme('dark')}
+          onCheckedChange={() => toggleTheme( theme=== 'dark' ? 'light' : 'dark')}
         />
-        DARK
+        <span>DARK</span>
       </div>
       <div className="theme-button w-20 flex items-center gap-2">
         <Checkbox 
           checked={isMonospaced} 
           onCheckedChange={toggleMonospaced}
         />
-        MONOSPACED
+        <span>MONOSPACED</span>
       </div>
     </div>
   )

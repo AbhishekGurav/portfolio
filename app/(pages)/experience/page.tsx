@@ -1,11 +1,83 @@
-import { TypographyH1 } from "@/components/ui/typographyH1";
+
+import { motion, AnimatePresence } from "motion/react";
 
 type Props = {};
 
+const expData = [
+  {
+    title: "Full Stack Developer",
+    org: "Oneture Technologies",
+    startDate: "July, 2024",
+    endDate: "Present",
+    link: "https://oneture.com/",
+    type: "Full-time",
+    summary: "This is my current job, where I was interviewed for a MERN Stack role, but was assigned to an Angular-Django Project. I was quick to adapt and delivered results in both Angular and React.",
+    description: [
+      "Mentored the entire frontend team for the AlgoAIOT, Link Device and HawkAI projects, which resulted in two projects and one POC being fast tracked into production, while working for CMS Infosystems.",
+      "Collaborated with designers, product managers, and back-end engineers to deliver new features and enhancements for the RMS Project.",
+      "Built multiple interactive dashboards for CMS Infosystem’s Intrusion Detection products for 41 Banking and Corporate clients.",
+      "Led the development of real-time video surveillance features across RMS Projects.",
+      "Developed the AlgoAIOT and Link Device projects using Angular 16 and Bootstrap.",
+      "Achieved 80% reduction in render times for complex dashboards and WebRTC features.",
+    ],
+  },
+  {
+    title: "Associate",
+    org: "Datamatics Staffing Services",
+    startDate: "Jan, 2024",
+    endDate: "Feb, 2024",
+    link: "https://datamatics.com/",
+    type: "Full-time Contract",
+    summary: "summary",
+    description: [
+      "Led the migration efforts to modernize a static HTML website to a React application, achieving a 77% uplift in user experience metrics at HDFC Bank.",
+      "Developed the frontend for an internal OCR product using React and Tailwind.",
+    ],
+  },
+  {
+    title: "Member of Technical Staff",
+    org: "Center for Computational Technologies",
+    startDate: "Nov, 2021",
+    endDate: "Aug, 2023",
+    link: "https://cctech.in/",
+    type: "Full-time",
+    summary: "Worked as a Frontend Developer",
+    description: [
+      "Mentored the entire frontend team for the AlgoAIOT, Link Device and HawkAI projects, which resulted in two projects and one POC being fast tracked into production, while working for CMS Infosystems.",
+      "Collaborated with designers, product managers, and back-end engineers to deliver new features and enhancements for the RMS Project.",
+      "Built multiple interactive dashboards for CMS Infosystem’s Intrusion Detection products for 41 Banking and Corporate clients.",
+      "Led the development of real-time video surveillance features across RMS Projects.",
+      "Developed the AlgoAIOT and Link Device projects using Angular 16 and Bootstrap.",
+      "Achieved 80% reduction in render times for complex dashboards and WebRTC features.",
+    ],
+  },
+];
+
 const Experience = (props: Props) => {
   return (
-    <div>
-      <TypographyH1>Experience</TypographyH1>
+    <div className="w-1/2 min-w-32 subpixel-antialiased items-end flex flex-col overflow-y-auto scroll-bar-thin">
+      {expData.map((job, key) => {
+        return (
+          <div key={key} className="mb-8 w-full p-4 border border-foreground rounded-lg shadow-lg bg-background">
+            
+              <p>{job.title}</p>
+              <span>{job.org}</span>
+              <p>
+                {job.startDate} - {job.endDate}
+              </p>
+              <span>{job.type}</span>
+              <p>{job.summary}</p>
+              <ul id="description" className="list-disc pl-5">
+                {job.description.map((desc, index) => (
+                  <li key={index}>{desc}</li>
+                ))}
+              </ul>
+            
+          </div>
+        );
+      })}
+
+      
     </div>
   );
 };

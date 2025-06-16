@@ -4,8 +4,8 @@ type Props = {};
 
 const Projects = (props: Props) => {
   return (
-    <div>
-      <TypographyH1>Projects</TypographyH1>
+    <div className="w-[7%] min-w-36 subpixel-antialiased flex flex-col justify-end">
+      <TypographyH1>Coming soon...</TypographyH1>
     </div>
   );
 };

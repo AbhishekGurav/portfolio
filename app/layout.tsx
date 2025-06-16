@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { inter, interTight, sharetechmono } from "./fonts";
+import { inter, sharetechmono } from "./fonts";
 import { NavSection } from "@/components/NavSection";
 import { NameSection } from "@/components/NameSection";
 import { ThemeControls } from "@/components/ThemeControls";
@@ -15,11 +15,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${interTight.variable} ${sharetechmono.variable} h-full w-full subpixel-antialiased`}>
-      <body className="h-full w-full antialiased p-12">
+    <html lang="en" className={`${inter.variable} ${sharetechmono.variable} h-full w-full subpixel-antialiased`}>
+      <body className="font-family h-full w-full antialiased p-12">
         <ThemeProvider>
-          <div className="h-full w-full p-8 border-1 border-foreground flex flex-row justify-between">
-            <div className="h-full font-inter flex flex-col">
+          <div className="h-full w-full p-8 border-1 border-foreground flex flex-row justify-between ">
+            <div className="h-full flex flex-col">
               <NameSection />
               <NavSection />
             </div>

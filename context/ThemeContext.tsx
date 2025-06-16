@@ -42,7 +42,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }, [theme]);
 
   useEffect(() => {
-    document.documentElement.classList.toggle('monospaced', isMonospaced);
+    document.documentElement.setAttribute('data-font', isMonospaced ? 'font-mono' : 'font-inter');
     localStorage.setItem('monospaced', String(isMonospaced));
   }, [isMonospaced]);
 
