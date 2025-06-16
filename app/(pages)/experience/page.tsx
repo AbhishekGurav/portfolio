@@ -28,7 +28,7 @@ const expData = [
     endDate: "Feb, 2024",
     link: "https://datamatics.com/",
     type: "Full-time Contract",
-    summary: "summary",
+    summary: "This was my 2nd job where I was trying out something new, unfortunately my core values did not align much with the culture at the workplace and I had to end it in a short tenure.",
     description: [
       "Led the migration efforts to modernize a static HTML website to a React application, achieving a 77% uplift in user experience metrics at HDFC Bank.",
       "Developed the frontend for an internal OCR product using React and Tailwind.",
@@ -55,19 +55,22 @@ const expData = [
 
 const Experience = (props: Props) => {
   return (
-    <div className="w-1/2 min-w-32 subpixel-antialiased items-end flex flex-col overflow-y-auto scroll-bar-thin">
+    <div className="w-1/2 min-w-32 p-1 subpixel-antialiased items-end flex flex-col overflow-y-auto scroll-bar-thin">
       {expData.map((job, key) => {
         return (
           <div key={key} className="mb-8 w-full p-4 border border-foreground rounded-lg shadow-lg bg-background">
             
-              <p>{job.title}</p>
+              <p className="text-xl font-bold uppercase" >{job.title}</p>
               <span>{job.org}</span>
+              <div className="text-muted-foreground text-sm flex flex-row justify-between">
               <p>
                 {job.startDate} - {job.endDate}
               </p>
-              <span>{job.type}</span>
-              <p>{job.summary}</p>
-              <ul id="description" className="list-disc pl-5">
+              <span >{job.type}</span>
+              </div>
+
+              <p className="mb-1">{job.summary}</p>
+              <ul id="description" className="list-disc pl-5 text-sm">
                 {job.description.map((desc, index) => (
                   <li key={index}>{desc}</li>
                 ))}
