@@ -1,8 +1,3 @@
-
-import { motion, AnimatePresence } from "motion/react";
-
-type Props = {};
-
 const expData = [
   {
     title: "Full Stack Developer",
@@ -50,10 +45,10 @@ const expData = [
       "Developed the AlgoAIOT and Link Device projects using Angular 16 and Bootstrap.",
       "Achieved 80% reduction in render times for complex dashboards and WebRTC features.",
     ],
-  },
+  }
 ];
 
-const Experience = (props: Props) => {
+const Experience = () => {
   return (
     <div className="w-1/2 min-w-32 p-1 subpixel-antialiased items-end flex flex-col overflow-y-auto scroll-bar-thin">
       {expData.map((job, key) => {
