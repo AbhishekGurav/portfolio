@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { TypographyList } from "./ui/typographyList";
- import {motion} from "motion/react"
+//  import {motion} from "motion/react"
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -22,31 +22,24 @@ export function NavSection() {
           const isActive = pathname === item.href;
 
           return (
-            <li key={item.href} className="flex items-center relative">
+            <li key={item.href} className="flex items-center">
               <Link
                 href={item.href}
-                className={`text-sm transition ${
+                className={`text-sm flex flex-row items-center gap-2 transition ${
                   isActive
                     ? "text-foreground font-bold"
                     : "text-gray-600"
                 }`}
               >
+                <div
+                  className={`${isActive ? "opacity-100" : "opacity-0"} h-2 w-2 rounded-full bg-foreground`}
+                />
                 
-                <span className={`${isActive ? "opacity-0" : "opacity-100"} text-foreground`}>
+                <span className={` text-foreground`}>
                   {item.name}
                 </span>
 
                
-                <motion.span
-                  layout // enable layout animation for smooth position changes
-                  className="absolute left-0 top-1/2 -translate-y-1/2 h-2 w-2 rounded-full bg-foreground"
-                  initial={false}
-                  animate={{
-                    y: isActive ? -1 : 0, // slide dot up by 2px when active
-                    opacity: isActive ? 1 : 0,
-                  }}
-                  transition={{ type: "spring", bounce: 0.25 }}
-                />
               </Link>
             </li>
           );
