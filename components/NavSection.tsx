@@ -9,7 +9,7 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "Experience", href: "/experience" },
   { name: "Open Source", href: "/open-source" },
-  { name: "Projects", href: "/projects" },
+  { name: "Personal Projects", href: "/projects" },
 ];
 
 export function NavSection() {
