@@ -1,3 +1,7 @@
+'use client'
+
+import { motion } from "motion/react";
+
 const expData = [
   {
     title: "Full Stack Developer",
@@ -50,13 +54,22 @@ const expData = [
 ];
 
 const Experience = () => {
+  
+
+  
   return (
-    <div className="w-1/2 min-w-32 p-1 subpixel-antialiased items-end flex flex-col overflow-y-auto scroll-bar-thin">
+    <div className="w-3/4 min-w-32 p-1 subpixel-antialiased items-end flex flex-col overflow-y-auto overflow-x-hidden scroll-bar-thin">
       {expData.map((job, key) => {
         return (
-          <div
+          <motion.div
+
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          whileHover={{ scale: 1.03 }}
+          transition={{ ease: "easeInOut", duration: 0.2 }}
+
             key={key}
-            className="mb-8 w-full p-4 border-2 rounded-lg shadow-xl bg-background"
+            className="mb-8 w-2/3 p-4 m-6 border-2 rounded-lg shadow-lg bg-background"
           >
             <p className="text-xl font-bold uppercase">{job.title}</p>
             <span>{job.org}</span>
@@ -73,7 +86,7 @@ const Experience = () => {
                 <li key={index}>{desc}</li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         );
       })}
     </div>
