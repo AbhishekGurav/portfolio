@@ -58,7 +58,7 @@ const Experience = () => {
 
   
   return (
-    <div className="w-3/4 min-w-32 p-1 subpixel-antialiased items-end flex flex-col overflow-y-auto overflow-x-hidden scroll-bar-thin">
+    <div className="w-2/3 min-w-32 p-1 subpixel-antialiased items-end flex flex-col overflow-y-auto overflow-x-hidden scroll-bar-thin">
       {expData.map((job, key) => {
         return (
           <motion.div
