@@ -10,6 +10,7 @@ const navItems = [
   { name: "Experience", href: "/experience" },
   { name: "Open Source", href: "/open-source" },
   { name: "Personal Projects", href: "/projects" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function NavSection() {
