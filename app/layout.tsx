@@ -6,8 +6,6 @@ import { NameSection } from "@/components/NameSection";
 import { ThemeControls } from "@/components/ThemeControls";
 import { ThemeProvider } from "@/context/ThemeContext";
 
-import { AnimatePresence } from "motion/react";
-
 
 
 export const metadata: Metadata = {
@@ -18,7 +16,6 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${sharetechmono.variable} h-full w-full subpixel-antialiased`}>
-      <AnimatePresence mode="wait">
         <body className="font-family h-full w-full antialiased p-12 max-sm:p-2">
           <ThemeProvider>
             <div className="h-full w-full p-8 border-1 border-foreground flex flex-row justify-between max-sm:flex-col">
@@ -31,7 +28,6 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
             <ThemeControls />      
           </ThemeProvider>
         </body>
-      </AnimatePresence>
     </html>
   );
 }

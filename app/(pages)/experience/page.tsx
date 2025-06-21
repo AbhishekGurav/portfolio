@@ -1,68 +1,135 @@
 'use client'
 
-import { motion, Variants } from "motion/react";
+import { motion, AnimatePresence, Variants } from "motion/react";
+import { useState } from "react";
 
 const Experience = () => {
-	const containerVariants: Variants = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				staggerChildren: 0.2,
-			},
-		},
-	};
+  const [expandedJob, setExpandedJob] = useState<number | null>(null);
 
-	const itemVariants: Variants = {
-		hidden: { x: 50, opacity: 0 },
-		visible: {
-			x: 0,
-			opacity: 1,
-			transition: {
-				duration: 0.2,
-			},
-		},
-	};
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
-	return (
-		<motion.div
-			variants={containerVariants}
-			initial="hidden"
-			animate="visible"
-			className="max-sm:w-full w-2/3 min-w-32 p-1 subpixel-antialiased items-end flex flex-col overflow-y-auto overflow-x-hidden scroll-bar-thin"
-		>
-			{expData.map((job, key) => {
-				return (
-					<motion.div
-						variants={itemVariants}
-						whileHover={{ scale: 1.03 }}
-						key={key}
-						className="max-sm:w-full max-sm:m-0 max-sm:mb-1 mb-8 w-2/3 p-4 m-6 border-2 rounded-lg shadow-lg bg-background"
-					>
-						<p className="text-xl font-bold uppercase">{job.title}</p>
-						<span>{job.org}</span>
-						<div className="text-muted-foreground text-sm flex flex-row justify-between">
-							<p className="bg-muted-foreground text-background rounded-sm px-2 py-0.5">
-								{job.startDate} - {job.endDate}
-							</p>
-							<span>{job.type}</span>
-						</div>
+  const itemVariants: Variants = {
+    hidden: { x: 50, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+      },
+    },
+  };
 
-						<p className="mb-1 italic">{job.summary}</p>
-						<ul id="description" className="list-disc pl-5 text-sm">
-							{job.description.map((desc, index) => (
-								<li key={index}>{desc}</li>
-							))}
-						</ul>
-					</motion.div>
-				);
-			})}
-		</motion.div>
-	);
+  const descriptionVariants: Variants = {
+    hidden: { 
+      opacity: 0, 
+      height: 0, 
+      y: -10,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut"
+      }
+    },
+    visible: { 
+      opacity: 1, 
+      height: "auto", 
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+        staggerChildren: 0.05
+      }
+    },
+    exit: {
+      opacity: 0,
+      height: 0,
+      y: -10,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const listItemVariants: Variants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: { duration: 0.3 }
+    }
+  };
+
+  const toggleExpanded = (index: number) => {
+    setExpandedJob(expandedJob === index ? null : index);
+  };
+
+  return (
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="max-sm:w-full w-2/3 min-w-32 p-1 subpixel-antialiased items-end flex flex-col overflow-y-auto overflow-x-hidden scroll-bar-thin"
+    >
+      {expData.map((job, key) => {
+        const isExpanded = expandedJob === key;
+        
+        return (
+          <motion.div
+            variants={itemVariants}
+            whileHover={{ scale: 1.03 }}
+            key={key}
+            className="max-sm:w-full max-sm:m-0 max-sm:mb-1 mb-8 w-2/3 p-4 m-6 border-2 rounded-lg shadow-lg bg-background cursor-pointer"
+            onClick={() => toggleExpanded(key)}
+          >
+            <p className="text-xl font-bold uppercase">{job.title}</p>
+            <span>{job.org}</span>
+            <div className="text-sm flex flex-row justify-between items-center">
+              <p>
+                {job.startDate} - {job.endDate}
+              </p>
+              <span className="bg-muted-foreground text-background rounded-sm px-2 py-0.5">{job.type}</span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <p className="mb-1 italic">{job.summary}</p>
+            </div>
+
+            <AnimatePresence>
+              {isExpanded && (
+                <motion.ul
+                  variants={descriptionVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  className="list-disc pl-5 text-sm overflow-hidden"
+                >
+                  {job.description.map((desc, index) => (
+                    <motion.li 
+                      key={index}
+                      variants={listItemVariants}
+                    >
+                      {desc}
+                    </motion.li>
+                  ))}
+                </motion.ul>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        );
+      })}
+    </motion.div>
+  );
 };
 
 export default Experience;
-
 
 const expData = [
 	{
