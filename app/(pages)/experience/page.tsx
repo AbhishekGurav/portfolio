@@ -86,16 +86,16 @@ const Experience = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.03 }}
             key={key}
-            className="max-sm:w-full max-sm:m-0 max-sm:mb-1 mb-8 w-2/3 p-4 m-6 border-2 rounded-lg shadow-lg bg-background cursor-pointer"
+            className="max-sm:w-full max-sm:m-0 max-sm:mb-1 mb-8 w-2/3 p-4 m-6 border-2 rounded-lg shadow-xl bg-background cursor-pointer"
             onClick={() => toggleExpanded(key)}
           >
             <p className="text-xl font-bold uppercase">{job.title}</p>
             <span>{job.org}</span>
-            <div className="text-sm flex flex-row justify-between items-center">
-              <p>
+            <div className="text-sm flex flex-row justify-between items-center mt-0.5 mb-0.5">
+              <p className="bg-muted-foreground text-background rounded-xs px-1 py-0.2">
                 {job.startDate} - {job.endDate}
               </p>
-              <span className="bg-muted-foreground text-background rounded-sm px-2 py-0.5">{job.type}</span>
+              <span className="bg-muted-foreground text-background rounded-xs px-1 py-0.2">{job.type}</span>
             </div>
 
             <div className="flex justify-between items-center">
