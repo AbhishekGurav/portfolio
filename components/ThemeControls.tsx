@@ -8,7 +8,7 @@ export const ThemeControls = () => {
   
   return (
     <div className={`theme-controls mt-1 flex w-fit flex-row gap-x-[15px] text-sm justify-start ${isMonospaced ? 'font-mono' : 'font-inter'}
-          max-sm:flex-col max-sm:w-32 max-sm:text-xs
+          max-sm:flex-col max-sm:w-28 max-sm:text-xs
     `}>
       <div className="theme-button w-20 flex items-center gap-2">
         <Checkbox 
