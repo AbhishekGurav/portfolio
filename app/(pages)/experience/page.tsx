@@ -76,7 +76,7 @@ const Experience = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="max-sm:w-full w-2/3 min-w-32 p-1 subpixel-antialiased items-end flex flex-col overflow-y-auto overflow-x-hidden scroll-bar-thin"
+      className="max-sm:w-full w-2/3 min-w-32 p-1 max-sm:pt-2 subpixel-antialiased items-end flex flex-col overflow-y-auto overflow-x-hidden scroll-bar-thin"
     >
       {expData.map((job, key) => {
         const isExpanded = expandedJob === key;
@@ -89,9 +89,10 @@ const Experience = () => {
             className="max-sm:w-full max-sm:m-0 max-sm:mb-1 mb-8 w-2/3 p-4 m-6 border-2 rounded-lg shadow-xl bg-background cursor-pointer"
             onClick={() => toggleExpanded(key)}
           >
-            <p className="text-xl font-bold uppercase">{job.title}</p>
-            <span>{job.org}</span>
-            <div className="text-sm flex flex-row justify-between items-center mt-0.5 mb-0.5">
+            <p className="text-2xl uppercase max-sm:text-lg">{job.title}</p>
+            <span className="font-bold">{job.org}</span>
+            <div className="text-sm flex flex-row justify-between items-center mt-0.5 mb-0.5 
+            max-sm:flex-col max-sm:items-start max-sm:gap-1">
               <p className="bg-muted-foreground text-background rounded-xs px-1 py-0.2">
                 {job.startDate} - {job.endDate}
               </p>
@@ -99,7 +100,7 @@ const Experience = () => {
             </div>
 
             <div className="flex justify-between items-center">
-              <p className="mb-1 italic">{job.summary}</p>
+              <p className="mb-1 italic max-sm:text-sm text-muted-foreground ">{job.summary}</p>
             </div>
 
             <AnimatePresence>
@@ -171,7 +172,7 @@ const expData = [
 		link: "https://cctech.in/",
 		type: "Full-time",
 		summary:
-			"My first job where I gained my first ever industriale experience working on production grade projects.",
+			"My first job where I gained my first ever industrial experience working on production grade projects.",
 		description: [
 			"Achieved 83% reduction in average page load time for the ’HVAC System Designer’ project using optimization techniques, efficient API integration, and thorough code reviews.",
 			"Mentored two freshers at CCTech, with hands-on guidance, focusing on enhancing their technical skills in frontend development and collaborative practices.",

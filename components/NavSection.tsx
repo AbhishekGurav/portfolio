@@ -17,7 +17,7 @@ export function NavSection() {
   const pathname = usePathname();
 
   return (
-    <section className="w-fit mt-10">
+    <section className="w-fit mt-10 max-sm:m-0">
       <TypographyList>
         {navItems.map((item) => {
           const isActive = pathname === item.href;
@@ -33,7 +33,7 @@ export function NavSection() {
                 }`}
               >
                 <div
-                  className={`${isActive ? "opacity-100" : "opacity-0"} h-2 w-2 rounded-full bg-foreground`}
+                  className={`${isActive ? "opacity-100" : "opacity-0"} h-2 w-2 rounded-full bg-foreground max-sm:opacity-0`}
                 />
                 
                 <span className={` text-foreground`}>
