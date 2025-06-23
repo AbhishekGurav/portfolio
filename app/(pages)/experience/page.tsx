@@ -143,7 +143,7 @@ const expData = [
 		summary:
 			"This is my current job, where I was interviewed for a MERN Stack role, but was assigned to an Angular-Django Project. I was quick to adapt and delivered results in both Angular and React.",
 		description: [
-			"Mentored the entire frontend team for the AlgoAIOT, Link Device and HawkAI projects, which resulted in two projects and one POC being fast tracked into production, while working for CMS Infosystems.",
+			"Led the entire frontend development for the AlgoAIOT, Link Device and HawkAI projects, which resulted in two projects and one POC being fast tracked into production, while working for CMS Infosystems.",
 			"Collaborated with designers, product managers, and back-end engineers to deliver new features and enhancements for the RMS Project.",
 			"Built multiple interactive dashboards for CMS Infosystem’s Intrusion Detection products for 41 Banking and Corporate clients.",
 			"Led the development of real-time video surveillance features across RMS Projects.",
