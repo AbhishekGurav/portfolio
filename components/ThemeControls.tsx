@@ -10,26 +10,26 @@ export const ThemeControls = () => {
     <div className={`theme-controls mt-1 flex w-fit flex-row gap-x-[15px] text-sm justify-start ${isMonospaced ? 'font-mono' : 'font-inter'}
           max-sm:flex-col max-sm:w-28 max-sm:text-xs
     `}>
-      <div className="theme-button w-20 flex items-center gap-2">
+      <div className="theme-button w-24 flex items-center gap-1">
         <Checkbox 
           checked={theme === 'light'} 
           onCheckedChange={() => toggleTheme( theme=== 'light' ? 'dark' : 'light')}
         />
-        <span>LIGHT</span>
+        <span className="pt-0.5">LIGHT</span>
       </div>
-      <div className="theme-button w-20 flex items-center gap-2">
+      <div className="theme-button w-24 flex items-center gap-1">
         <Checkbox 
           checked={theme === 'dark'} 
           onCheckedChange={() => toggleTheme( theme=== 'dark' ? 'light' : 'dark')}
         />
-        <span>DARK</span>
+        <span className="pt-0.5">DARK</span>
       </div>
-      <div className="theme-button w-20 flex items-center gap-2">
+      <div className="theme-button w-24 flex items-center gap-1">
         <Checkbox 
           checked={isMonospaced} 
           onCheckedChange={toggleMonospaced}
         />
-        <span>MONOSPACED</span>
+        <span className="pt-0.5">MONOSPACED</span>
       </div>
     </div>
   )

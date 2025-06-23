@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "motion/react";
+import { motion, Variants } from "motion/react";
 import Link from "next/link";
 
 const projectData = [
@@ -19,16 +19,39 @@ const projectData = [
   }
 ];
 
+const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { x: 50, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+      },
+    },
+  };
+
 const Projects = () => {
   return (
-    <div className="max-sm:w-full w-2/3 min-w-32 p-1 subpixel-antialiased items-end flex flex-col overflow-y-auto overflow-x-hidden scroll-bar-thin">
+    <motion.div
+    variants={containerVariants}
+    initial="hidden"
+    animate="visible"
+    className="max-sm:w-full w-2/3 min-w-32 p-1 subpixel-antialiased items-end flex flex-col overflow-y-auto overflow-x-hidden scroll-bar-thin">
       {projectData.map((project, key) => {
         return (
           <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            variants={itemVariants}
             whileHover={{ scale: 1.03 }}
-            transition={{ ease: "circInOut", duration: 0.2 }}
             key={key}
             className="max-sm:w-full max-sm:m-0 max-sm:mb-1 mb-8 w-2/3 p-4 m-6 border-2 rounded-lg shadow-lg bg-background"
           >
@@ -48,7 +71,7 @@ const Projects = () => {
           </motion.div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 

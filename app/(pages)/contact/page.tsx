@@ -7,7 +7,7 @@ const Contact = () => {
       className="h-full min-sm:w-3/5 subpixel-antialiased flex flex-col justify-center items-center
     max-sm:w-full max-sm:h-full max-sm:gap-2 max-sm:p-4"
     >
-      <div className=" flex flex-col min-w-52 overflow-visible max-sm:w-4/5 max-sm:justify-around max-sm:items-center">
+      <div className=" flex flex-col min-w-52 max-sm:text-xs overflow-visible gap-y-2 max-sm:w-4/5 max-sm:justify-around max-sm:items-center">
         <Link
           href="mailto:abhishekgurav97@gmail.com"
           className="flex max-sm:w-full justify-between items-center gap-2 hover:underline"

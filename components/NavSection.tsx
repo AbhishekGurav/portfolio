@@ -17,7 +17,7 @@ export function NavSection() {
   const pathname = usePathname();
 
   return (
-    <section className="w-fit mt-10 max-sm:m-0">
+    <section className="w-fit mt-10 max-sm:mb-1 max-sm:mt-0">
       <TypographyList>
         {navItems.map((item) => {
           const isActive = pathname === item.href;
@@ -26,21 +26,18 @@ export function NavSection() {
             <li key={item.href} className="flex items-center">
               <Link
                 href={item.href}
-                className={`text-sm flex flex-row items-center gap-2 transition ${
+                className={`text-sm flex flex-row items-center gap-2 transition mx-1 px-1 rounded ${
                   isActive
-                    ? "text-foreground font-bold"
+                    ? "min-sm:text-foreground min-sm:font-bold max-sm:bg-foreground"
                     : "text-gray-600"
                 }`}
               >
                 <div
-                  className={`${isActive ? "opacity-100" : "opacity-0"} h-2 w-2 rounded-full bg-foreground max-sm:opacity-0`}
+                  className={`${isActive ? "opacity-100" : "opacity-0"} h-2 w-2 rounded-full bg-foreground max-sm:hidden`}
                 />
-                
-                <span className={` text-foreground`}>
+                <span className={`text-foreground ${isActive ? "max-sm:text-background" : "max-sm:text-foreground"}`}>
                   {item.name}
                 </span>
-
-               
               </Link>
             </li>
           );

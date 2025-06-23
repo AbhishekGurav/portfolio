@@ -42,9 +42,9 @@ const Experience = () => {
       height: "auto", 
       y: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.2,
         ease: "easeOut",
-        staggerChildren: 0.05
+        staggerChildren: 0.1
       }
     },
     exit: {
