@@ -141,7 +141,7 @@ const expData = [
 		link: "https://oneture.com/",
 		type: "Full-time",
 		summary:
-			"This is my current job, where I was interviewed for a MERN Stack role, but was assigned to an Angular-Django Project. I was quick to adapt and delivered results in both Angular and React.",
+			"This is my current job, where I was quick to adapt and delivered results in both Angular and React.",
 		description: [
 			"Led the entire frontend development for the AlgoAIOT, Link Device and HawkAI projects, which resulted in two projects and one POC being fast tracked into production, while working for CMS Infosystems.",
 			"Collaborated with designers, product managers, and back-end engineers to deliver new features and enhancements for the RMS Project.",
