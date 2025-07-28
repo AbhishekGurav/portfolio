@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { motion, AnimatePresence, Variants } from "motion/react";
 import { useState } from "react";
@@ -28,24 +28,24 @@ const Experience = () => {
   };
 
   const descriptionVariants: Variants = {
-    hidden: { 
-      opacity: 0, 
-      height: 0, 
+    hidden: {
+      opacity: 0,
+      height: 0,
       y: -10,
       transition: {
         duration: 0.3,
-        ease: "easeInOut"
-      }
+        ease: "easeInOut",
+      },
     },
-    visible: { 
-      opacity: 1, 
-      height: "auto", 
+    visible: {
+      opacity: 1,
+      height: "auto",
       y: 0,
       transition: {
         duration: 0.2,
         ease: "easeOut",
-        staggerChildren: 0.1
-      }
+        staggerChildren: 0.1,
+      },
     },
     exit: {
       opacity: 0,
@@ -53,18 +53,18 @@ const Experience = () => {
       y: -10,
       transition: {
         duration: 0.3,
-        ease: "easeInOut"
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   };
 
   const listItemVariants: Variants = {
     hidden: { opacity: 0, x: -20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       x: 0,
-      transition: { duration: 0.3 }
-    }
+      transition: { duration: 0.3 },
+    },
   };
 
   const toggleExpanded = (index: number) => {
@@ -80,7 +80,7 @@ const Experience = () => {
     >
       {expData.map((job, key) => {
         const isExpanded = expandedJob === key;
-        
+
         return (
           <motion.div
             variants={itemVariants}
@@ -91,16 +91,22 @@ const Experience = () => {
           >
             <p className="text-2xl uppercase max-sm:text-lg">{job.title}</p>
             <span className="font-bold">{job.org}</span>
-            <div className="text-sm flex flex-row justify-between items-center mt-0.5 mb-0.5 
-            max-sm:flex-col max-sm:items-start max-sm:gap-1">
+            <div
+              className="text-sm flex flex-row justify-between items-center mt-0.5 mb-0.5 
+            max-sm:flex-col max-sm:items-start max-sm:gap-1"
+            >
               <p className="bg-muted-foreground text-background rounded-xs px-1 py-0.2">
                 {job.startDate} - {job.endDate}
               </p>
-              <span className="bg-muted-foreground text-background rounded-xs px-1 py-0.2">{job.type}</span>
+              <span className="bg-muted-foreground text-background rounded-xs px-1 py-0.2">
+                {job.type}
+              </span>
             </div>
 
             <div className="flex justify-between items-center">
-              <p className="mb-1 italic max-sm:text-sm text-muted-foreground ">{job.summary}</p>
+              <p className="mb-1 italic max-sm:text-sm text-muted-foreground ">
+                {job.summary}
+              </p>
             </div>
 
             <AnimatePresence>
@@ -113,10 +119,7 @@ const Experience = () => {
                   className="list-disc pl-5 text-sm overflow-hidden"
                 >
                   {job.description.map((desc, index) => (
-                    <motion.li 
-                      key={index}
-                      variants={listItemVariants}
-                    >
+                    <motion.li key={index} variants={listItemVariants}>
                       {desc}
                     </motion.li>
                   ))}
@@ -133,52 +136,53 @@ const Experience = () => {
 export default Experience;
 
 const expData = [
-	{
-		title: "Full Stack Developer",
-		org: "Oneture Technologies",
-		startDate: "July, 2024",
-		endDate: "Present",
-		link: "https://oneture.com/",
-		type: "Full-time",
-		summary:
-			"This is my current job, where I was quick to adapt and delivered results in both Angular and React.",
-		description: [
-			"Led the entire frontend development for the AlgoAIOT, Link Device and HawkAI projects, which resulted in two projects and one POC being fast tracked into production, while working for CMS Infosystems.",
-			"Collaborated with designers, product managers, and back-end engineers to deliver new features and enhancements for the RMS Project.",
-			"Built multiple interactive dashboards for CMS Infosystem’s Intrusion Detection products for 41 Banking and Corporate clients.",
-			"Led the development of real-time video surveillance features across RMS Projects.",
-			"Achieved 80% reduction in render times for complex dashboards and WebRTC features.",
-		],
-	},
-	{
-		title: "Associate",
-		org: "Datamatics Staffing Services",
-		startDate: "Jan, 2024",
-		endDate: "Feb, 2024",
-		link: "https://datamatics.com/",
-		type: "Full-time Contract",
-		summary:
-			"This was my 2nd job where I was trying out something new, unfortunately my core values did not align much with the culture at the workplace and I had to end it in a short tenure.",
-		description: [
-			"Led the migration efforts to modernize a static HTML website to a React application, achieving a 77% uplift in user experience metrics at HDFC Bank.",
-			"Developed the frontend for an internal OCR product using React and Tailwind.",
-		],
-	},
-	{
-		title: "Member of Technical Staff",
-		org: "Center for Computational Technologies",
-		startDate: "Nov, 2021",
-		endDate: "Aug, 2023",
-		link: "https://cctech.in/",
-		type: "Full-time",
-		summary:
-			"My first job where I gained my first ever industrial experience working on production grade projects.",
-		description: [
-			"Achieved 83% reduction in average page load time for the ’HVAC System Designer’ project using optimization techniques, efficient API integration, and thorough code reviews.",
-			"Mentored two freshers at CCTech, with hands-on guidance, focusing on enhancing their technical skills in frontend development and collaborative practices.",
-			"Led the refactoring of reusable components which led to 60% of improvement in team productivity.",
-			"Developed the HVAC System Designer project for PE Load Calcs using React, ReactRedux, Immutable.",
-			"Developed the GBD project for Autodesk Toronto using HTML, CSS, d3.js and Express.js.",
-		],
-	},
+  {
+    title: "Full Stack Developer",
+    org: "Oneture Technologies",
+    startDate: "July, 2024",
+    endDate: "Present",
+    link: "https://oneture.com/",
+    type: "Full-time",
+    summary:
+      "This is my current job, where I was quick to adapt in Angular and delivered results in both Angular and React.",
+    description: [
+      "Developed the Link Device and HawkAI projects using React and Angular",
+      "Collaborated with designers, product managers, and back-end engineers to deliver new features and enhancements for the RMS Project.",
+      "Built multiple interactive dashboards for CMS Infosystem’s Intrusion Detection products for 41 Banking and Corporate clients.",
+      "Launched 20+ new features and resolved 90+ bugs, improving stability and load performance by 30%.",
+      "Transformed 15+ Figma designs into responsive front-end code.",
+      "Led the development of real-time video surveillance features across RMS Projects.",
+      "Spearheaded the Link Device pilot for CMS Infosystems with a lean team, delivering a working POC within 3 weeks and setting the stage for production deployment.",
+    ],
+  },
+  {
+    title: "Associate",
+    org: "Datamatics Staffing Services",
+    startDate: "Jan, 2024",
+    endDate: "Feb, 2024",
+    link: "https://datamatics.com/",
+    type: "Full-time Contract",
+    summary:
+      "This was my 2nd job where I was trying out something new, unfortunately my core values did not align much with the culture at the workplace and I had to end it in a short tenure.",
+    description: [
+      "Migrated a legacy static HTML website into a responsive web application using React, React Router, Tailwind CSS for HDFC Bank, improving maintainability and user experience across devices.",
+    ],
+  },
+  {
+    title: "Member of Technical Staff",
+    org: "Center for Computational Technologies",
+    startDate: "Nov, 2021",
+    endDate: "Aug, 2023",
+    link: "https://cctech.in/",
+    type: "Full-time",
+    summary:
+      "My first job where I gained my first ever industrial experience working on production grade projects.",
+    description: [
+      "Developed the HVAC System Designer project for PE Load Calcs using React, ReactRedux, Immutable.",
+      "Developed the GBD project for Autodesk Toronto using plain HTML, CSS, Express.js and d3.js.",
+      "Refactored key React components to reduce rendering time by 30%, boosting overall app performance by 25%.",
+      "Built a scalable design system with reusable components and utility-first Tailwind styles, reducing UI inconsistencies and cutting feature development time by over 30%.",
+      "Achieved an 80% reduction in load times for the HVAC System Designer project at CCTech by implementing memoization in high-frequency components and eliminating unnecessary Redux re-renders.",
+    ],
+  },
 ];
