@@ -21,7 +21,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
           <ThemeProvider>
             <Background />
             <div className="h-full w-full p-8 border-1 border-foreground flex flex-row min-sm:justify-between 
-            max-sm:flex-col max-sm:p-2 relative backdrop-blur-[6px]
+            max-sm:flex-col max-sm:p-2 relative backdrop-blur-[6px] max-sm:backdrop-blur-xs
             ">
               <div className=" flex flex-col max-sm:h-fit">
                 <NameSection />

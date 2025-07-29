@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence, Variants } from "motion/react";
+import Link from "next/link";
 import { useState } from "react";
 
 const Experience = () => {
@@ -90,7 +91,14 @@ const Experience = () => {
             onClick={() => toggleExpanded(key)}
           >
             <p className="text-2xl uppercase max-sm:text-lg">{job.title}</p>
+            <Link
+              href={job.link}
+              target="_blank"
+              rel="noopener"
+              className="no-underline"
+            >
             <span className="font-bold">{job.org}</span>
+            </Link>
             <div
               className="text-sm flex flex-row justify-between items-center mt-0.5 mb-0.5 
             max-sm:flex-col max-sm:items-start max-sm:gap-1"
@@ -125,7 +133,8 @@ const Experience = () => {
                   ))}
                 </motion.ul>
               )}
-            </AnimatePresence>
+            </AnimatePresence> 
+            
           </motion.div>
         );
       })}
@@ -173,7 +182,7 @@ const expData = [
     org: "Center for Computational Technologies",
     startDate: "Nov, 2021",
     endDate: "Aug, 2023",
-    link: "https://cctech.in/",
+    link: "https://cctech.co.in/",
     type: "Full-time",
     summary:
       "My first job where I gained my first ever industrial experience working on production grade projects.",
