@@ -8,7 +8,6 @@ import { TypographyList } from "./ui/typographyList";
 const navItems = [
   { name: "Home", href: "/" },
   { name: "Experience", href: "/experience" },
-  { name: "Open Source", href: "/open-source" },
   { name: "Personal Projects", href: "/projects" },
   { name: "Contact", href: "/contact" },
 ];
