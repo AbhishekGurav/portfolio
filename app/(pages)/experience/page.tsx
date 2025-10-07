@@ -97,7 +97,7 @@ const Experience = () => {
               rel="noopener"
               className="no-underline"
             >
-            <span className="font-bold">{job.org}</span>
+              <span className="font-bold">{job.org}</span>
             </Link>
             <div
               className="text-sm flex flex-row justify-between items-center mt-0.5 mb-0.5 
@@ -133,8 +133,7 @@ const Experience = () => {
                   ))}
                 </motion.ul>
               )}
-            </AnimatePresence> 
-            
+            </AnimatePresence>
           </motion.div>
         );
       })}
@@ -155,13 +154,12 @@ const expData = [
     summary:
       "This is my current job, where I was quick to adapt in Angular and delivered results in both Angular and React.",
     description: [
-      "Developed the Link Device and HawkAI projects using React and Angular",
-      "Collaborated with designers, product managers, and back-end engineers to deliver new features and enhancements for the RMS Project.",
-      "Built multiple interactive dashboards for CMS Infosystem’s Intrusion Detection products for 41 Banking and Corporate clients.",
-      "Launched 20+ new features and resolved 90+ bugs, improving stability and load performance by 30%.",
+      "Built a performant web application for CMS Infosystem’s AI-based Intrusion Detection product, loads under 2 seconds and has a Lighthouse score of 95.",
+      "Created my own video player and optimized video streaming features by reworking WebSocket utilization.",
+      "Launched 10+ new features and resolved 90+ bugs, improving stability and load performance by 30%.",
       "Transformed 15+ Figma designs into responsive front-end code.",
-      "Led the development of real-time video surveillance features across RMS Projects.",
-      "Spearheaded the Link Device pilot for CMS Infosystems with a lean team, delivering a working POC within 3 weeks and setting the stage for production deployment.",
+      "Successfully achieved the deliverables on a short notice within 4 weeks, for the Link Device POC at CMS Infosystems while leading a lean team of 3.",
+      "Technologies: Angular, WebSockets, React, Bootstrap, Tailwind, TypeScript",
     ],
   },
   {
@@ -174,7 +172,8 @@ const expData = [
     summary:
       "This was my 2nd job where I was trying out something new, unfortunately my core values did not align much with the culture at the workplace and I had to end it in a short tenure.",
     description: [
-      "Migrated a legacy static HTML website into a responsive web application using React, React Router, Tailwind CSS for HDFC Bank, improving maintainability and user experience across devices.",
+      "Migrated a legacy static HTML website into a responsive web application for HDFC Bank, improving maintainability and user experience across devices.",
+      "Technologies: React, ReactRouter, Tailwind.",
     ],
   },
   {
@@ -191,7 +190,8 @@ const expData = [
       "Developed the GBD project for Autodesk Toronto using plain HTML, CSS, Express.js and d3.js.",
       "Refactored key React components to reduce rendering time by 30%, boosting overall app performance by 25%.",
       "Built a scalable design system with reusable components and utility-first Tailwind styles, reducing UI inconsistencies and cutting feature development time by over 30%.",
-      "Achieved an 80% reduction in load times for the HVAC System Designer project at CCTech by implementing memoization in high-frequency components and eliminating unnecessary Redux re-renders.",
+      "Achieved a 70% reduction in load times for the HVAC System Designer project at CCTech by implementing memoization in high-frequency components and eliminating unnecessary Redux re-renders.",
+      "Technologies: React, ReactRouter, Redux Toolkit, MaterialUI, Immutable.js, Three.js, d3.js"
     ],
   },
 ];
