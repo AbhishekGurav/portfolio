@@ -154,12 +154,12 @@ const expData = [
     summary:
       "This is my current job, where I was quick to adapt in Angular and delivered results in both Angular and React.",
     description: [
-      "Built a performant web application for CMS Infosystem’s AI-based Intrusion Detection product, loads under 2 seconds and has a Lighthouse score of 95.",
-      "Created my own video player and optimized video streaming features by reworking WebSocket utilization.",
-      "Launched 10+ new features and resolved 90+ bugs, improving stability and load performance by 30%.",
+      "Built a performant web application for CMS Infosystem’s AI-based Intrusion Detection products, loads under 2 seconds and has a Lighthouse score of 95.",
+      "Created my own video player and optimized streaming features by reworking web socket utilization, which reduced the video load time by 90%.",
+      "Launched 10+ new features and resolved 105+ bugs, improving stability and load performance by 30%.",
+      "Implemented class-based custom theming using the Context API and localStorage.",
       "Transformed 15+ Figma designs into responsive front-end code.",
-      "Successfully achieved the deliverables on a short notice within 4 weeks, for the Link Device POC at CMS Infosystems while leading a lean team of 3.",
-      "Technologies: Angular, WebSockets, React, Bootstrap, Tailwind, TypeScript",
+      "Technologies: Angular, Socket.io, React, Bootstrap, Tailwind, TypeScript,Chart.js, Leaflet.js.",
     ],
   },
   {
@@ -173,7 +173,7 @@ const expData = [
       "This was my 2nd job where I was trying out something new, unfortunately my core values did not align much with the culture at the workplace and I had to end it in a short tenure.",
     description: [
       "Migrated a legacy static HTML website into a responsive web application for HDFC Bank, improving maintainability and user experience across devices.",
-      "Technologies: React, ReactRouter, Tailwind.",
+      "Technologies: React, ReactRouter, Tailwind, Context API.",
     ],
   },
   {
@@ -186,12 +186,11 @@ const expData = [
     summary:
       "My first job where I gained my first ever industrial experience working on production grade projects.",
     description: [
-      "Developed the HVAC System Designer project for PE Load Calcs using React, ReactRedux, Immutable.",
-      "Developed the GBD project for Autodesk Toronto using plain HTML, CSS, Express.js and d3.js.",
-      "Refactored key React components to reduce rendering time by 30%, boosting overall app performance by 25%.",
-      "Built a scalable design system with reusable components and utility-first Tailwind styles, reducing UI inconsistencies and cutting feature development time by over 30%.",
-      "Achieved a 70% reduction in load times for the HVAC System Designer project at CCTech by implementing memoization in high-frequency components and eliminating unnecessary Redux re-renders.",
-      "Technologies: React, ReactRouter, Redux Toolkit, MaterialUI, Immutable.js, Three.js, d3.js"
+      "Integrated the open sourced ReactPlanner into the HVAC System Designer project for PE Load Calcs.",
+      "Implemented custom light and dark themes with automatic user preferred theming using localStorage.",
+      "Modularized the code base reducing UI inconsistencies and cutting feature development time by over 35%.",
+      "Built a bridge visualization tool for Autodesk Toronto including the REST APIs.",
+      "Technologies: React, React Router, Redux, Immutable.js, Three.js, d3.js, Express.js, MaterialUI, Google MapsAPI.",
     ],
   },
 ];
