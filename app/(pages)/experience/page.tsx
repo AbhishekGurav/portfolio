@@ -145,21 +145,21 @@ export default Experience;
 
 const expData = [
   {
-    title: "Full Stack Developer",
+    title: "Full Stack Developer (Data)",
     org: "Oneture Technologies",
     startDate: "July, 2024",
     endDate: "Present",
     link: "https://oneture.com/",
     type: "Full-time",
     summary:
-      "This is my current job, where I was quick to adapt in Angular and delivered results in both Angular and React.",
+      "This is my current job, where I was quick to adapt in Data Engineering with AWS technologies and Databricks",
     description: [
-      "Built a performant web application for CMS Infosystem’s AI-based Intrusion Detection products, loads under 2 seconds and has a Lighthouse score of 95.",
-      "Created my own video player and optimized streaming features by reworking web socket utilization, which reduced the video load time by 90%.",
-      "Launched 10+ new features and resolved 105+ bugs, improving stability and load performance by 30%.",
-      "Implemented class-based custom theming using the Context API and localStorage.",
-      "Transformed 15+ Figma designs into responsive front-end code.",
-      "Technologies: Angular, Socket.io, React, Bootstrap, Tailwind, TypeScript,Chart.js, Leaflet.js.",
+      "Built data ingestion, transformation, and modelling workflows on the Databricks Data Intelligence Platform using PySpark and Delta Lake.",
+      "Designed and deployed ETL pipelines processing 15TB daily data, reducing ingestion time from 8 hours to 45 minutes.",
+      "Worked on two cross platform migration POCs using Databricks, EMR and Redshift.",
+      "Built real-time data streaming pipelines for AI-based intrusion detection systems, including WebSocket-based live feeds.",
+      "Developed interactive data visualisation dashboards for operational monitoring using Chart.js and Leaflet.js.",
+      "Resolved performance bottlenecks using Chrome DevTools, achieving a Lighthouse score of 95 — while working in development.",
     ],
   },
   {
@@ -170,10 +170,9 @@ const expData = [
     link: "https://datamatics.com/",
     type: "Full-time Contract",
     summary:
-      "This was my 2nd job where I was trying out something new, unfortunately my core values did not align much with the culture at the workplace and I had to end it in a short tenure.",
+      "This was my 2nd job where I was trying out something new in a purely data science environement",
     description: [
-      "Migrated a legacy static HTML website into a responsive web application for HDFC Bank, improving maintainability and user experience across devices.",
-      "Technologies: React, ReactRouter, Tailwind, Context API.",
+      "Contributed to an internal OCR/ML-based document recognition pipeline using Python,  Pandas, OpenCV and Tesseract.",
     ],
   },
   {
@@ -186,11 +185,8 @@ const expData = [
     summary:
       "My first job where I gained my first ever industrial experience working on production grade projects.",
     description: [
-      "Integrated the open sourced ReactPlanner into the HVAC System Designer project for PE Load Calcs.",
-      "Implemented custom light and dark themes with automatic user preferred theming using localStorage.",
-      "Modularized the code base reducing UI inconsistencies and cutting feature development time by over 35%.",
-      "Built a bridge visualization tool for Autodesk Toronto including the REST APIs.",
-      "Technologies: React, React Router, Redux, Immutable.js, Three.js, d3.js, Express.js, MaterialUI, Google MapsAPI.",
+      "Built data-driven 3D visualisation tools including a bridge analysis system for Autodesk (Three.js, d3.js) and an HVAC System Designer using React, Express and MongoDB.",
+      "Modularised a complex codebase, reducing feature development time by 35%.",
     ],
   },
 ];
