@@ -152,14 +152,13 @@ const expData = [
     link: "https://oneture.com/",
     type: "Full-time",
     summary:
-      "This is my current job, where I was quick to adapt in Data Engineering with AWS technologies and Databricks",
+      "This is my current job, where I built my first ever custom video player in a web application",
     description: [
-      "Built data ingestion, transformation, and modelling workflows on the Databricks Data Intelligence Platform using PySpark and Delta Lake.",
-      "Designed and deployed ETL pipelines processing 15TB daily data, reducing ingestion time from 8 hours to 45 minutes.",
-      "Worked on two cross platform migration POCs using Databricks, EMR and Redshift.",
-      "Built real-time data streaming pipelines for AI-based intrusion detection systems, including WebSocket-based live feeds.",
-      "Developed interactive data visualisation dashboards for operational monitoring using Chart.js and Leaflet.js.",
-      "Resolved performance bottlenecks using Chrome DevTools, achieving a Lighthouse score of 95 — while working in development.",
+      "Built a performant web application for CMS Infosystem’s AI-based Intrusion Detection products, with load times under 2 seconds and a CLS of 0.01.",
+      "Created a custom video player from scratch and optimized streaming features by reworking web socket utilization, which reduced video load time by 90%.",
+      "Launched 10+ new features and resolved 105+ bugs, improving stability and load performance by 30%.",
+      "Resolved performance bottlenecks using Chrome DevTools, bringing the Lighthouse score to 95.",
+      "Transformed 35+ Figma designs into responsive front-end features.",
     ],
   },
   {
@@ -170,9 +169,10 @@ const expData = [
     link: "https://datamatics.com/",
     type: "Full-time Contract",
     summary:
-      "This was my 2nd job where I was trying out something new in a purely data science environement",
+      "This role helped me transition into a more product-focused web development environment, building responsive interfaces and improving maintainability.",
     description: [
-      "Contributed to an internal OCR/ML-based document recognition pipeline using Python,  Pandas, OpenCV and Tesseract.",
+      "Migrated a legacy static HTML website into a responsive web application for HDFC Bank, improving maintainability and user experience across devices.",
+      "Modularized the code base, reducing UI inconsistencies and cutting feature development time by over 35%.",
     ],
   },
   {
@@ -185,8 +185,10 @@ const expData = [
     summary:
       "My first job where I gained my first ever industrial experience working on production grade projects.",
     description: [
-      "Built data-driven 3D visualisation tools including a bridge analysis system for Autodesk (Three.js, d3.js) and an HVAC System Designer using React, Express and MongoDB.",
-      "Modularised a complex codebase, reducing feature development time by 35%.",
+      "Integrated the open sourced ReactPlanner into the HVAC System Designer project for PE Load Calcs.",
+      "Implemented custom light and dark themes with automatic user-preferred theming using localStorage.",
+      "Modularized the code base, reducing UI inconsistencies and cutting feature development time by over 35%.",
+      "Built a bridge visualization tool for Autodesk Toronto, including the REST APIs.",
     ],
   },
 ];

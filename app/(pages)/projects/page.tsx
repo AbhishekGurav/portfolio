@@ -4,18 +4,18 @@ import Link from "next/link";
 
 const projectData = [
   {
-    title: "Databricks to Amazon EMR Accelerator",
+    title: "Apple 3D",
     summary:
-      "Built a proof of concept integrating Databricks Unity Catalog with Amazon EMR on EC2, enabling governed cross-platform access to Delta Lake and Apache Iceberg tables without data replication.",
-    techStack: "Databricks, Amazon EMR, Unity Catalog, Delta Lake, Apache Iceberg, S3, IAM",
-    link: "#",
+      "A fun project where I recreated an iPhone website in 3D while learning Three.js.",
+    techStack: "React, Three.js, Tailwind CSS",
+    link: "https://3dconcept-by-abhishek.netlify.app/",
   },
   {
-    title: "Snowflake to Amazon Redshift POC",
+    title: "Portfolio",
     summary:
-      "Delivered a benchmarking POC comparing Snowflake and Amazon Redshift for analytics workloads, analyzing query runtimes and resource consumption to support platform selection and migration decisions.",
-    techStack: "Snowflake, Amazon Redshift, SQL, Performance Benchmarking",
-    link: "#",
+      "This website, my first attempt at a minimalistic design, inspired by a few other designers.",
+    techStack: "Next.js, Framer Motion, shadcn, Tailwind CSS",
+    link: "/",
   },
 ];
 

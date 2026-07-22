@@ -9,8 +9,8 @@ const Home = () => {
     ">
       <TypographyLarge>
         Born in 1997, Mumbai, I've always been passionate about technology and
-        what it can provide to this world we live in. I'm a Databricks Certified Data Engineer and am hopeful to become
-        a great data professional along the way.
+        what it can provide to this world we live in. I'm a Frontend Engineer and am hopeful to become
+        a great Software Engineer along the way.
       </TypographyLarge>
     </div>
   );
