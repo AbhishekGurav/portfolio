@@ -145,7 +145,7 @@ export default Experience;
 
 const expData = [
   {
-    title: "Full Stack Developer (Data)",
+    title: "Full Stack Developer",
     org: "Oneture Technologies",
     startDate: "July, 2024",
     endDate: "Present",
