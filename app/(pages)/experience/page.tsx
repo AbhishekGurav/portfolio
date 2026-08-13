@@ -154,10 +154,11 @@ const expData = [
     summary:
       "This is my current job, where I built my first ever custom video player in a web application",
     description: [
-      "Built a performant web application for CMS Infosystem’s AI-based Intrusion Detection products, with load times under 2 seconds and a CLS of 0.01.",
-      "Created a custom video player from scratch and optimized streaming features by reworking web socket utilization, which reduced video load time by 90%.",
-      "Launched 10+ new features and resolved 105+ bugs, improving stability and load performance by 30%.",
+      "Built a performant web application for AI-based Intrusion Detection products, with a CLS of 0.01.",
+      "Created a custom video player from scratch and optimized streaming features by reworking web socket utilization, which reduced the video load time by 90%.",
+      "Rebuilt advanced map-based dashboards and reduced Largest Contentful Paint (LCP) by 68% from 4.1s to 1.3s.",
       "Resolved performance bottlenecks using Chrome DevTools, bringing the Lighthouse score to 95.",
+      "Resolved cross-browser rendering bugs and UI inconsistencies across mobile Safari, Chrome, and Edge, dropping client-side error rates by 40%.",
       "Transformed 35+ Figma designs into responsive front-end features.",
     ],
   },
@@ -171,8 +172,10 @@ const expData = [
     summary:
       "This role helped me transition into a more product-focused web development environment, building responsive interfaces and improving maintainability.",
     description: [
-      "Migrated a legacy static HTML website into a responsive web application for HDFC Bank, improving maintainability and user experience across devices.",
-      "Modularized the code base, reducing UI inconsistencies and cutting feature development time by over 35%.",
+      "Migrated a legacy static HTML website into a responsive web application for HDFC Bank, cut visual regression bugs by 72% across 2 products and 2 engineers.",
+      "Implemented custom light and dark themes with automatic user preferred theming using localStorage.",
+      "Spearheaded transition to a reusable Tailwind component system, reducing front-end feature development time in half for future sprints by 40%.",
+      "Modularized the code base reducing UI inconsistencies and cutting feature development time by over 35%.",
     ],
   },
   {
@@ -185,10 +188,12 @@ const expData = [
     summary:
       "My first job where I gained my first ever industrial experience working on production grade projects.",
     description: [
-      "Integrated the open sourced ReactPlanner into the HVAC System Designer project for PE Load Calcs.",
-      "Implemented custom light and dark themes with automatic user-preferred theming using localStorage.",
-      "Modularized the code base, reducing UI inconsistencies and cutting feature development time by over 35%.",
-      "Built a bridge visualization tool for Autodesk Toronto, including the REST APIs.",
+      "Integrated the open sourced ReactPlanner into the HVAC System Designer project.",
+      "Modularized the code base reducing UI inconsistencies and cutting feature development time by over 35%.",
+      "Launched 10+ new features and resolved 105+ bugs, improving stability and load performance by 30%.",
+      "Integrated complex REST APIs with React frontend components, ensuring smooth asynchronous data handling and robust error boundaries.",
+      "Increased unit test coverage from 20% to 85% across core React components using Jest and React Testing Library, reducing production bugs.",
+      "Built a bridge visualization tool for Autodesk Toronto including the REST APIs.",
     ],
   },
 ];
