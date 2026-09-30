@@ -1,4 +1,10 @@
-import type { LucideIcon } from "lucide-react";
+import type { ComponentType, SVGProps } from "react";
+
+/**
+ * An icon component that accepts a `size` prop, satisfied by both lucide-react
+ * icons and our inlined BrandIcon components.
+ */
+export type IconComponent = ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
 
 /** A single work experience entry. */
 export type Job = {
@@ -46,7 +52,7 @@ export type ContactLink = {
   label: string;
   value: string;
   href: string;
-  icon: LucideIcon;
+  icon: IconComponent;
   /** Open in a new tab with rel="noopener". */
   external: boolean;
 };

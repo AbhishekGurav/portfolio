@@ -1,4 +1,5 @@
-import { Linkedin, Mail, Twitter, Smartphone, Github } from "lucide-react";
+import { Mail, Smartphone } from "lucide-react";
+import { GithubIcon, LinkedinIcon, XIcon } from "@/components/ui/BrandIcon";
 import type { ContactLink } from "./types";
 
 export const contactLinks: ContactLink[] = [
@@ -13,7 +14,7 @@ export const contactLinks: ContactLink[] = [
     label: "LinkedIn",
     value: "linkedin.com/in/abhishek-gurav",
     href: "https://www.linkedin.com/in/abhishek-gurav",
-    icon: Linkedin,
+    icon: LinkedinIcon,
     external: true,
   },
   {
@@ -24,17 +25,17 @@ export const contactLinks: ContactLink[] = [
     external: false,
   },
   {
-    label: "Twitter",
+    label: "X",
     value: "@_abhishekgurav",
     href: "https://x.com/_abhishekgurav",
-    icon: Twitter,
+    icon: XIcon,
     external: true,
   },
   {
     label: "GitHub",
     value: "AbhishekGurav",
     href: "https://github.com/AbhishekGurav",
-    icon: Github,
+    icon: GithubIcon,
     external: true,
   },
 ];

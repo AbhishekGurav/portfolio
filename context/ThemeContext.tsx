@@ -13,27 +13,24 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('light');
-  const [isMonospaced, setIsMonospaced] = useState(false);
+// Resolve the initial theme once, at state-init time. Guarded for SSR where
+// window/localStorage are unavailable — the server renders the 'light' default
+// and the effects below reconcile the DOM on the client.
+function getInitialTheme(): Theme {
+  if (typeof window === 'undefined') return 'light';
+  const savedTheme = localStorage.getItem('theme') as Theme | null;
+  if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
 
-  useEffect(() => {
-    // Check if theme was previously set
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    const savedMonospaced = localStorage.getItem('monospaced') === 'true';
-    
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else {
-      // Check system preference
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(systemPrefersDark ? 'dark' : 'light');
-    }
-    
-    if (savedMonospaced) {
-      setIsMonospaced(savedMonospaced);
-    }
-  }, []);
+function getInitialMonospaced(): boolean {
+  if (typeof window === 'undefined') return false;
+  return localStorage.getItem('monospaced') === 'true';
+}
+
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const [isMonospaced, setIsMonospaced] = useState(getInitialMonospaced);
 
   useEffect(() => {
     document.documentElement.classList.remove('light', 'dark');
