@@ -2,25 +2,8 @@
 import { motion, Variants } from "motion/react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-
-const projectData = [
-  {
-    title: "Apple 3D",
-    summary:
-      "A fun project where I recreated an iPhone website in 3D while learning Three.js.",
-    techStack: "React, Three.js, Tailwind CSS",
-    link: "https://3dconcept-by-abhishek.netlify.app/",
-    accent: "from-neutral-300 to-neutral-500",
-  },
-  {
-    title: "Portfolio",
-    summary:
-      "This website, my first attempt at a minimalistic design, inspired by a few other designers.",
-    techStack: "Next.js, Framer Motion, shadcn, Tailwind CSS",
-    link: "/",
-    accent: "from-neutral-400 to-neutral-600",
-  },
-];
+import { Section } from "@/components/Section";
+import { projects } from "@/content/projects";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -42,18 +25,14 @@ const itemVariants: Variants = {
 const Projects = () => {
   return (
     <div className="py-16 max-sm:py-10">
-      <section className="grid grid-cols-[220px_1fr] gap-12 max-lg:grid-cols-1 max-lg:gap-6">
-        <h1 className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          Projects
-        </h1>
-
+      <Section label="Projects" as="h1">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="grid grid-cols-2 gap-x-6 gap-y-10 max-sm:grid-cols-1"
         >
-          {projectData.map((project) => {
+          {projects.map((project) => {
             const external = project.link.startsWith("http");
 
             return (
@@ -97,7 +76,7 @@ const Projects = () => {
             );
           })}
         </motion.div>
-      </section>
+      </Section>
     </div>
   );
 };

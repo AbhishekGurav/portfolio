@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { PillLink } from "@/components/ui/PillLink";
 
 export default function NotFound() {
   return (
@@ -14,16 +13,9 @@ export default function NotFound() {
         The page you&apos;re looking for doesn&apos;t exist or may have been
         moved.
       </p>
-      <Link
-        href="/"
-        className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm text-background transition-opacity hover:opacity-90"
-      >
+      <PillLink href="/" arrow>
         Back home
-        <ArrowUpRight
-          size={16}
-          className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-        />
-      </Link>
+      </PillLink>
     </div>
   );
 }

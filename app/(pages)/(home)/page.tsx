@@ -1,21 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-
-const featuredProjects = [
-  {
-    title: "Apple 3D",
-    tag: "Three.js / React",
-    href: "https://3dconcept-by-abhishek.netlify.app/",
-    // Placeholder swatch — swap for a real thumbnail later.
-    accent: "from-neutral-300 to-neutral-500",
-  },
-  {
-    title: "Portfolio",
-    tag: "Next.js / Tailwind",
-    href: "/projects",
-    accent: "from-neutral-400 to-neutral-600",
-  },
-];
+import { PillLink } from "@/components/ui/PillLink";
+import { featuredProjects } from "@/content/projects";
 
 const Home = () => {
   return (
@@ -32,22 +18,12 @@ const Home = () => {
         </h1>
 
         <div className="flex flex-wrap items-center gap-4 pt-2">
-          <Link
-            href="/projects"
-            className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm text-background transition-opacity hover:opacity-90"
-          >
+          <PillLink href="/projects" arrow>
             View my work
-            <ArrowUpRight
-              size={16}
-              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
-          </Link>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm transition-colors hover:border-foreground"
-          >
+          </PillLink>
+          <PillLink href="/contact" variant="outline">
             Get in touch
-          </Link>
+          </PillLink>
         </div>
       </section>
 
@@ -70,25 +46,29 @@ const Home = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-6 max-sm:grid-cols-1">
-          {featuredProjects.map((project) => (
-            <Link
-              key={project.title}
-              href={project.href}
-              target={project.href.startsWith("http") ? "_blank" : undefined}
-              rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group flex flex-col gap-3"
-            >
-              <div
-                className={`aspect-[4/3] w-full overflow-hidden rounded-xl bg-gradient-to-br ${project.accent} transition-transform duration-500 group-hover:scale-[1.01]`}
-              />
-              <div className="flex items-center justify-between">
-                <span className="text-lg font-medium">{project.title}</span>
-                <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                  {project.tag}
-                </span>
-              </div>
-            </Link>
-          ))}
+          {featuredProjects.map((project) => {
+            const external = project.link.startsWith("http");
+
+            return (
+              <Link
+                key={project.title}
+                href={project.link}
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
+                className="group flex flex-col gap-3"
+              >
+                <div
+                  className={`aspect-[4/3] w-full overflow-hidden rounded-xl bg-gradient-to-br ${project.accent} transition-transform duration-500 group-hover:scale-[1.01]`}
+                />
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-medium">{project.title}</span>
+                  <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                    {project.techStack.split(",")[0]}
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </section>
     </div>
