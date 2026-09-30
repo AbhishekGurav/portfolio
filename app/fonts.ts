@@ -1,13 +1,17 @@
-import { Inter, Share_Tech_Mono} from "next/font/google";
+import { Inter_Tight, Space_Mono } from "next/font/google";
 
-export const inter = Inter({
-  variable: "--font-inter-variable",
+// Display + body typeface. Inter Tight is a calm, cozy grotesk and the closest
+// freely-available (Google Fonts) stand-in for Neue Haas Grotesk Display Pro,
+// which is a commercial typeface and cannot be loaded via next/font/google.
+export const interTight = Inter_Tight({
+  variable: "--font-inter-tight",
   subsets: ["latin"],
-  weight: ["200", "400", "700"]
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-export const sharetechmono = Share_Tech_Mono({
-  variable: "--font-share-tech-mono",
+// Mono for the small uppercase labels/tags used across the Arnau layout.
+export const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
   subsets: ["latin"],
-  weight: ["400"]
+  weight: ["400", "700"],
 });

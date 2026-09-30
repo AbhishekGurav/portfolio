@@ -1,38 +1,38 @@
 import "./globals.css";
-import type { Metadata } from "next";
-import { inter, sharetechmono } from "./fonts";
-import { NavSection } from "@/components/NavSection";
-import { NameSection } from "@/components/NameSection";
-import { ThemeControls } from "@/components/ThemeControls";
+import type { Metadata, Viewport } from "next";
+import { interTight, spaceMono } from "./fonts";
+import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "@/context/ThemeContext";
-import { Background } from "@/components/Background";
-
-
 
 export const metadata: Metadata = {
   title: "Abhishek Gurav",
-  description: "Portfolio of Abhishek Gurav",
+  description: "Portfolio of Abhishek Gurav — Senior Frontend Engineer",
 };
 
-export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
+// Explicit viewport so mobile browsers render at device width instead of a
+// zoomed-out desktop layout. maximumScale is left generous (5) and
+// userScalable stays on for accessibility / OS pinch-zoom.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${sharetechmono.variable} h-full w-full subpixel-antialiased`}>
-        <body className="font-family h-full w-full antialiased p-12 max-sm:p-2 relative">
-          <ThemeProvider>
-            <Background />
-            <div className="h-full w-full p-8 border-1 border-foreground flex flex-row min-sm:justify-between 
-            max-sm:flex-col max-sm:p-2 relative backdrop-blur-[6px] max-sm:backdrop-blur-xs
-            ">
-              <div className=" flex flex-col max-sm:h-fit">
-                <NameSection />
-                <NavSection />
-              </div>
-              {children}
-            </div>
-            <div className="max-sm:hidden"><ThemeControls /></div>  
-          </ThemeProvider>
-        </body>
+    <html
+      lang="en"
+      className={`${interTight.variable} ${spaceMono.variable} h-full w-full`}
+    >
+      <body className="min-h-screen w-full bg-background text-foreground antialiased">
+        <ThemeProvider>
+          <Navbar />
+          <main className="mx-auto w-full max-w-6xl px-6 max-sm:px-4">
+            {children}
+          </main>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
-
