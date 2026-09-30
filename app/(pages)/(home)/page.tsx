@@ -1,7 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import { PillLink } from "@/components/ui/PillLink";
 import { featuredProjects } from "@/content/projects";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const Home = () => {
   return (

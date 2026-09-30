@@ -5,9 +5,16 @@ import { skillGroups } from "@/content/skills";
 import { education } from "@/content/education";
 
 export const metadata: Metadata = {
-  title: "About — Abhishek Gurav",
+  title: "About",
   description:
     "About Abhishek Gurav, Senior Frontend Engineer based in Mumbai.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About — Abhishek Gurav",
+    description:
+      "About Abhishek Gurav, Senior Frontend Engineer based in Mumbai.",
+    url: "/about",
+  },
 };
 
 const About = () => {

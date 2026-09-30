@@ -6,8 +6,16 @@ import { PillLink } from "@/components/ui/PillLink";
 import { contactLinks } from "@/content/contact";
 
 export const metadata: Metadata = {
-  title: "Contact — Abhishek Gurav",
-  description: "Get in touch with Abhishek Gurav.",
+  title: "Contact",
+  description:
+    "Get in touch with Abhishek Gurav — Senior Frontend Engineer based in Mumbai.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact — Abhishek Gurav",
+    description:
+      "Get in touch with Abhishek Gurav — Senior Frontend Engineer based in Mumbai.",
+    url: "/contact",
+  },
 };
 
 const Contact = () => {
